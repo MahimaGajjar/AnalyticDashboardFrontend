@@ -2,6 +2,7 @@
   height: 100vh;
   width: 15vw;
   background-color: #fbfbfc;
+  transition: transform 0.3s ease-in-out;
 }
 
 .sidebarContent {
@@ -13,32 +14,147 @@
 .sidebarHeader {
   padding: 10px;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .sidebarHeader img {
   width: 100px;
   margin-top: 40px;
 }
-.sidebarContent {
-  padding: 0px;
-}
+
 ul {
   list-style: none;
+  padding: 0;
 }
 
 li {
   font-size: 18px;
   display: flex;
-  padding: 8px 0;
+  padding: 8px 15px;
   cursor: pointer;
   margin-right: 10px;
   border-radius: 5px;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+.menuIcon {
+  margin-right: 10px;
+}
+
+.activeItem {
+  background-color: rgba(102, 13, 226, 0.2);
 }
 
 li:hover {
+  background-color: rgba(102, 13, 226, 0.5);
+}
+
+.hamburgerIcon {
+  font-size: 24px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+}
+
+.closeIcon {
+  font-size: 22px;
+  top: -15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  padding: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-top: 1px solid #ddd;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sidebarFooter:hover {
   background-color: rgba(102, 13, 226, 0.2);
 }
-.sidebarFooter {
-  padding: 10px;
-  border-top: 1px solid #ccc;
-  font-weight: bold;
+
+@media (min-width: 1280px) {
+  .hamburgerIcon,
+  .closeIcon {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .menuIcon {
+    padding-right: 5px;
+  }
+
+  .sidebar {
+    width: 40vw;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .sidebarHeader img {
+    margin-top: 20px;
+  }
+
+  li {
+    font-size: 15px;
+    display: flex;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    align-items: center;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .hamburgerIcon {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    padding-right: 5px;
+  }
+
+  .sidebar {
+    width: 40vw;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .sidebarHeader img {
+    margin-top: 20px;
+  }
+
+  li {
+    font-size: 15px;
+    display: flex;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    align-items: center;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .hamburgerIcon {
+    display: block;
+  }
 }

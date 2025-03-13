@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconWrapper {
+  background-color: rgba(102, 13, 226, 0.1);
+  color: #493d9e;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.iconWrapper:hover {
+  background-color: rgba(102, 13, 226, 0.2);
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.text {
+  background-color: rgba(102, 13, 226, 0.1);
+  color: #493d9e;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 15px 15px 0px 15px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .iconWrapper {
+    width: 26px;
+    height: 26px;
+  }
+
+  .icon {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .text {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 2px 6px;
+  }
+
+  .iconWrapper {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon {
+    font-size: 12px;
+  }
+}

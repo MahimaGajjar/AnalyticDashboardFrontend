@@ -1,13 +1,23 @@
 import React from "react";
 import styles from "./userdetails.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
+import {
+  faUser,
+  faBell,
+  faEnvelope,
+} from "@fortawesome/free-regular-svg-icons"; 
 
 const Userdetails = () => {
-  //   const [user, setUser] = useState("");
-
   return (
     <div className={styles.container}>
+      <div className={styles.iconWrapper}>
+        <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
+      </div>
+
+      <div className={styles.iconWrapper}>
+        <FontAwesomeIcon icon={faBell} className={styles.icon} />
+      </div>
+
       <div className={styles.text}>
         <FontAwesomeIcon
           icon={faUser}
