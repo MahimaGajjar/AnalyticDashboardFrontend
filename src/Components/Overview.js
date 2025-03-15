@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { loadCSVData } from "../utils/loadCSV";
-import { Bar, Pie, Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   BarElement,
@@ -77,34 +77,34 @@ const Overview = () => {
     return acc;
   }, {});
 
-  const pieChartData = {
-    labels: Object.keys(evTypeCounts),
-    datasets: [
-      {
-        label: "EV Type Distribution",
-        data: Object.values(evTypeCounts),
-        backgroundColor: ["#1abc9c", "#e67e22", "#9b59b6"],
-      },
-    ],
-  };
+  // const pieChartData = {
+  //   labels: Object.keys(evTypeCounts),
+  //   datasets: [
+  //     {
+  //       label: "EV Type Distribution",
+  //       data: Object.values(evTypeCounts),
+  //       backgroundColor: ["#1abc9c", "#e67e22", "#9b59b6"],
+  //     },
+  //   ],
+  // };
 
-  const yearCounts = data.reduce((acc, curr) => {
-    const year = curr["Model Year"];
-    acc[year] = (acc[year] || 0) + 1;
-    return acc;
-  }, {});
+  // const yearCounts = data.reduce((acc, curr) => {
+  //   const year = curr["Model Year"];
+  //   acc[year] = (acc[year] || 0) + 1;
+  //   return acc;
+  // }, {});
 
-  const lineChartData = {
-    labels: Object.keys(yearCounts).sort(),
-    datasets: [
-      {
-        label: "EV Growth Over Years",
-        data: Object.values(yearCounts).sort((a, b) => a - b),
-        borderColor: "#3498db",
-        fill: false,
-      },
-    ],
-  };
+  // const lineChartData = {
+  //   labels: Object.keys(yearCounts).sort(),
+  //   datasets: [
+  //     {
+  //       label: "EV Growth Over Years",
+  //       data: Object.values(yearCounts).sort((a, b) => a - b),
+  //       borderColor: "#3498db",
+  //       fill: false,
+  //     },
+  //   ],
+  // };
 
   return (
     <div className={styles.container}>

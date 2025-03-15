@@ -5,7 +5,7 @@ import Userdetails from "./Userdetails";
 import NavigationBar from "./NavigationBar";
 import Datatable from "./Datatable";
 import { faChartBar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const EVdata = () => {
   const tabs = [

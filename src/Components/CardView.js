@@ -46,9 +46,9 @@ const CardView = () => {
     manufacturerCounts[item.Make] = (manufacturerCounts[item.Make] || 0) + 1;
   });
 
-  const topManufacturers = Object.entries(manufacturerCounts)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5);
+  // const topManufacturers = Object.entries(manufacturerCounts)
+  //   .sort((a, b) => b[1] - a[1])
+  //   .slice(0, 5);
   if (loading) return <div className={styles.loader}>Loading Data...</div>;
   const evTypeCounts = data.reduce((acc, curr) => {
     acc[curr["Electric Vehicle Type"]] =

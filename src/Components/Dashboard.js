@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./dashboard.module.css";
 import Sidebar from "./Sidebar";
 import Userdetails from "./Userdetails";
@@ -10,9 +10,8 @@ import {
   faFile,
   faGear,
   faSquarePollVertical,
-  faClipboardUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Overview from "./Overview";
 const Dashboard = () => {
   const tabs = [
