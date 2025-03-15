@@ -28,3 +28,11 @@
   border: 1px solid #ccc;
   width: 100%;
 }
+.heading {
+  color: #493d9e;
+  font-weight: 700;
+  padding: 2px 11px;
+  border-radius: 15px 15px 0px 15px;
+  font-size: 25px;
+  line-height: 24px;
+}

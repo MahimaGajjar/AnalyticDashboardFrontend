@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./sidebar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faTimes,
-  faSignOutAlt, // Logout icon
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faCalendarDays,
@@ -13,14 +14,21 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 
 const menuItems = [
-  { icon: faAddressCard, label: "Dashboard" },
-  { icon: faCalendarDays, label: "EV Data" },
-  { icon: faUser, label: "Organizations" },
+  { icon: faAddressCard, label: "Dashboard", path: "/" },
+  { icon: faCalendarDays, label: "EV Data", path: "/evdata" },
+  { icon: faUser, label: "Organizations", path: "/organizations" },
 ];
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const navigate = useNavigate();
+  const handleNavigation = (index, path) => {
+    if (selected !== index) {
+      setSelected(index);
+      navigate(path);
+    }
+  };
 
   return (
     <>
@@ -50,7 +58,7 @@ const Sidebar = () => {
               <li
                 key={index}
                 className={selected === index ? styles.activeItem : ""}
-                onClick={() => setSelected(index)}
+                onClick={() => handleNavigation(index, item.path)}
               >
                 <FontAwesomeIcon icon={item.icon} className={styles.menuIcon} />
                 {item.label}
@@ -58,7 +66,10 @@ const Sidebar = () => {
             ))}
           </ul>
 
-          <div className={styles.sidebarFooter} onClick={() => alert("Logging out...")}>
+          <div
+            className={styles.sidebarFooter}
+            onClick={() => alert("Logging out...")}
+          >
             <FontAwesomeIcon icon={faSignOutAlt} className={styles.menuIcon} />
             Logout
           </div>
