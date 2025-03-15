@@ -40,14 +40,12 @@ const Dashboard = () => {
       icon: faFile,
       component: <div className={styles.heading}>Timeline Content</div>,
     },
-   
+
     {
       id: "compliance",
       label: " Status",
       icon: faSquarePollVertical,
-      component: (
-        <div className={styles.heading}>Status </div>
-      ),
+      component: <div className={styles.heading}>Status </div>,
     },
   ];
   return (

@@ -5,7 +5,7 @@ import {
   faUser,
   faBell,
   faEnvelope,
-} from "@fortawesome/free-regular-svg-icons"; 
+} from "@fortawesome/free-regular-svg-icons";
 
 const Userdetails = () => {
   return (

@@ -130,10 +130,6 @@ const Overview = () => {
           <h3>Top 5 EV Manufacturers</h3>
           <Bar data={barChartData} />
         </div>
-
-       
-
-       
       </div>
     </div>
   );

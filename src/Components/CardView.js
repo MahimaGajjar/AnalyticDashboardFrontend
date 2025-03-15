@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { loadCSVData } from "../utils/loadCSV";
-import {  Pie, Line } from "react-chartjs-2";
+import { Pie, Line } from "react-chartjs-2";
 
 import {
   Chart as ChartJS,
@@ -61,7 +61,7 @@ const CardView = () => {
       {
         label: "EV Type Distribution",
         data: Object.values(evTypeCounts),
-        backgroundColor: ["#1abc9c", "#e67e22", "#9b59b6"],
+        backgroundColor: ["#FFB200", "#500073", "#000"],
       },
     ],
   };
@@ -86,7 +86,7 @@ const CardView = () => {
     <div className={styles.container}>
       <h2 className={styles.heading}>Electric Vehicle Population </h2>
       <div className={styles.infoContainer}>
-      <div className={styles.linechartContainer}>
+        <div className={styles.linechartContainer}>
           <h3>EV Growth Over Years</h3>
           <Line data={lineChartData} />
         </div>
