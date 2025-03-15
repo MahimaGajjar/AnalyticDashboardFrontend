@@ -1,82 +1,93 @@
 .navigationWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .navigationContainer {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-  }
-  
-  .tabContent {
-    padding: 10px;
-  }
-  
-  button {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigationContainer {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.tabContent {
+  padding: 10px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button .icon {
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: rgba(102, 13, 226, 0.2);
+}
+
+button.active {
+  background-color: #7d23eb;
+  color: #fff !important;
+}
+
+.navicons {
+  margin-right: 8px;
+}
+@media (min-width: 1024px) {
+  .navigationContainer button {
     display: flex;
     align-items: center;
-    padding: 8px 12px;
-    background-color: transparent;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    gap: 8px;
   }
-  
-  button .icon {
-    font-size: 20px;
+}
+@media (max-width: 1024px) {
+  .navigationContainer {
+    gap: 30px;
+    padding: 5px;
   }
 
-  
+  button {
+    padding: 2px;
+    border-radius: 8px;
+    background-color: transparent !important;
+    color: black !important;
+  }
+  .hideLabel {
+    display: none;
+  }
+
+  .showLabel {
+    display: inline-block;
+    padding: 5px;
+    margin-left: 8px;
+  }
+
   button:hover {
-    background-color: rgba(102, 13, 226, 0.2);
+    background-color: transparent !important;
   }
-  
+
   button.active {
-    background-color: #7d23eb;
-    color: #fff;
+    background-color: #7d23eb !important;
   }
-  
-  .navicons{
-    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .navigationContainer {
+    gap: 15px;
   }
-  @media (min-width: 1024px) {
-    .navigationContainer button {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+
+  button {
+    width: auto;
+    justify-content: center;
+    padding: auto;
+    font-size: 12px;
   }
-  @media (max-width: 1024px) {
-    .navigationContainer {
-      gap: 15px; /* Reduce gap */
-      padding: 5px; /* Reduce padding */
-    }
-  
-    button {
-      padding: 2px;
-      border-radius: 8px;
-      background-color: transparent !important;
-      color: black !important;
-    }
-    .hideLabel {
-      display: none;
-    }
-  
-    .showLabel {
-      display: inline-block;
-      padding: 5px;
-      margin-left: 8px;
-    }
-  
-    button:hover {
-      background-color: transparent !important;
-    }
-  
-    button.active {
-      background-color: #7d23eb !important;
-    }
-  }
-  
+}

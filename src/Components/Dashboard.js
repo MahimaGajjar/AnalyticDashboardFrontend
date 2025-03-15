@@ -3,6 +3,7 @@ import styles from "./dashboard.module.css";
 import Sidebar from "./Sidebar";
 import Userdetails from "./Userdetails";
 import NavigationBar from "./NavigationBar";
+import CardView from "./CardView";
 import {
   faChartBar,
   faMapPin,
@@ -22,6 +23,12 @@ const Dashboard = () => {
       component: <Overview />,
     },
     {
+      id: "cardview",
+      label: "Card View",
+      icon: faGear,
+      component: <CardView />,
+    },
+    {
       id: "livelocation",
       label: "Live Location",
       icon: faMapPin,
@@ -33,25 +40,14 @@ const Dashboard = () => {
       icon: faFile,
       component: <div className={styles.heading}>Timeline Content</div>,
     },
-    {
-      id: "cardview",
-      label: "Card View",
-      icon: faGear,
-      component: <div className={styles.heading}> Card View Content</div>,
-    },
+   
     {
       id: "compliance",
-      label: "Compliance Status",
+      label: " Status",
       icon: faSquarePollVertical,
       component: (
-        <div className={styles.heading}>Compliance Status Content</div>
+        <div className={styles.heading}>Status </div>
       ),
-    },
-    {
-      id: "siteattendence",
-      label: "Site Attendance",
-      icon: faClipboardUser,
-      component: <div className={styles.heading}>Site Attendance Content</div>,
     },
   ];
   return (
