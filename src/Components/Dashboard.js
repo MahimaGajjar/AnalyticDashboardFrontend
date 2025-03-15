@@ -54,7 +54,6 @@ const Dashboard = () => {
       component: <div className={styles.heading}>Site Attendance Content</div>,
     },
   ];
-console.log(tabs);
   return (
     <div className={styles.dashboardContainer}>
       <Sidebar />

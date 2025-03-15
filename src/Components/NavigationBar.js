@@ -5,10 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const NavigationBar = ({ tabs = [] }) => {
   const [activeTab, setActiveTab] = useState(tabs.length > 0 ? tabs[0].id : "");
 
-  // Debugging logs
-  useEffect(() => {
-    console.log("Received tabs in NavigationBar:", tabs);
-  }, [tabs]);
+  // useEffect(() => {
+  //   console.log("Received tabs in NavigationBar:", tabs);
+  // }, [tabs]);
 
   return (
     <div className={styles.navigationWrapper}>

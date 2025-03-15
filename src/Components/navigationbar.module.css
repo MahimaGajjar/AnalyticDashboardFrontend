@@ -46,12 +46,12 @@
     .navigationContainer button {
       display: flex;
       align-items: center;
-      gap: 8px; /* Adjust spacing as needed */
+      gap: 8px;
     }
   }
   @media (max-width: 1024px) {
     .navigationContainer {
-      gap: 0px; /* Reduce gap */
+      gap: 15px; /* Reduce gap */
       padding: 5px; /* Reduce padding */
     }
   
@@ -67,6 +67,7 @@
   
     .showLabel {
       display: inline-block;
+      padding: 5px;
       margin-left: 8px;
     }
   

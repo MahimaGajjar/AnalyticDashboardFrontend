@@ -1,0 +1,134 @@
+.container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 24px;
+    color: #493d9e;
+    margin-bottom: 15px;
+  }
+  
+  /* Filters & Search */
+  .controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .controls select,
+  .controls input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Table */
+  .tableWrapper {
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 20px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .table th {
+    background: #493d9e;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .table th:hover {
+    background: #4335A7;
+  }
+  
+  .table tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .pagination button {
+    padding: 8px 15px;
+    border: none;
+    background: #4335A7 !important;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  .loaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+  
+  .loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #4335A7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+  @media (max-width: 768px) {
+    .controls {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .controls select,
+    .controls input {
+      width: 100%;
+    }
+  
+    .table th,
+    .table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .pagination {
+        flex-direction: row; 
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 1px;
+      }
+      .pagination button {
+        padding: 6px 12px; /* Adjust padding for mobile */
+        font-size: 14px; /* Reduce font size slightly */
+      }
+  }
+  
