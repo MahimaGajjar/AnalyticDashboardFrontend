@@ -24,6 +24,8 @@ const Sidebar = () => {
   const [selected, setSelected] = useState(null);
   const navigate = useNavigate();
   const handleNavigation = (index, path) => {
+    if (menuItems[index].label === "Organizations") return;
+
     if (selected !== index) {
       setSelected(index);
       navigate(path);
@@ -55,14 +57,15 @@ const Sidebar = () => {
 
           <ul className={styles.menuList}>
             {menuItems.map((item, index) => (
-              <li
-                key={index}
-                className={selected === index ? styles.activeItem : ""}
-                onClick={() => handleNavigation(index, item.path)}
-              >
-                <FontAwesomeIcon icon={item.icon} className={styles.menuIcon} />
-                {item.label}
-              </li>
+             <li
+             key={index}
+             className={`${selected === index ? styles.activeItem : ""} 
+                         ${item.label === "Organizations" ? styles.disabledItem : ""}`}
+             onClick={() => handleNavigation(index, item.path)}
+           >
+             <FontAwesomeIcon icon={item.icon} className={styles.menuIcon} />
+             {item.label}
+           </li>
             ))}
           </ul>
 

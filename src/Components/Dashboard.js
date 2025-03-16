@@ -11,8 +11,9 @@ import {
   faGear,
   faSquarePollVertical,
 } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Overview from "./Overview";
+import Card from "./Card"; 
+
 const Dashboard = () => {
   const tabs = [
     {
@@ -31,22 +32,37 @@ const Dashboard = () => {
       id: "livelocation",
       label: "Live Location",
       icon: faMapPin,
-      component: <div className={styles.heading}>Live Location Content</div>,
+      component: (
+        <div className={styles.centeredContent}>
+          <div className={styles.heading}>Live Location Content</div>
+          <Card text="Tracking real-time locations with accuracy." />
+        </div>
+      ),
     },
     {
       id: "timeline",
       label: "Timeline",
       icon: faFile,
-      component: <div className={styles.heading}>Timeline Content</div>,
+      component: (
+        <div className={styles.centeredContent}>
+          <div className={styles.heading}>Timeline Content</div>
+          <Card text="View all historical events and activities." />
+        </div>
+      ),
     },
-
     {
       id: "compliance",
-      label: " Status",
+      label: "Status",
       icon: faSquarePollVertical,
-      component: <div className={styles.heading}>Status </div>,
+      component: (
+        <div className={styles.centeredContent}>
+          <div className={styles.heading}>Status</div>
+          <Card text="Current system compliance and health status." />
+        </div>
+      ),
     },
   ];
+
   return (
     <div className={styles.dashboardContainer}>
       <Sidebar />
