@@ -49,3 +49,12 @@
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 15px;
+    padding: 0px; 
+    margin: 0px; 
+  }
+  
+}
+
